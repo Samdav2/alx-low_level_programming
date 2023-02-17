@@ -1,11 +1,9 @@
 #include <stdio.h>
 /**
  * main - This returns no arguements
+ * (void) - Returns O valu
  */
 int main(void)
-/**
- * puts - Prints programming is like building a multilingual puzzle
- */
 {
 	puts("\"Programmig is like building a multilingual puzzle\n");
 	getchar();
