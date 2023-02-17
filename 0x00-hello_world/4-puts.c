@@ -2,6 +2,7 @@
 /**
  * main - This returns no arguements
  * (void) - Returns O valu
+ * Return:0 (success)
  */
 int main(void)
 {
