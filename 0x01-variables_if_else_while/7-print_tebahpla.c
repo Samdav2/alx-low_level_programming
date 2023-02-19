@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * main - This section takes in no arguement
- * Return:0(success)
+ * Return: 0(success)
  */
 int main(void)
 {
 	char letter;
 
-	for (letter = 'z'; letter <= 'a'; letter++)
+	for (letter = 'z'; letter >= 'z'; letter--)
 		{
 		putchar(letter);
 		}
