@@ -5,7 +5,7 @@
  *Return: 0(success)
  */
 int _putchar(char c);
-void print_alphabet(void);
+void print_alphabet(void)
 {
         char letter;
 
