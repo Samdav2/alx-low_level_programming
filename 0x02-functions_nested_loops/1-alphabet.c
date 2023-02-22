@@ -3,8 +3,15 @@
  * main - prints letter a-z is smaller cases
  * Return: 0(success)
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	char letter = 'a'
+
+		wlile (letter <= 'z')
+		{
+		_putchar(letter);
+		letter++
+		}
+		_putchar('\n');
 	return (0);
 }
