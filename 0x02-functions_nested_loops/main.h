@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - prints letter a-z is smaller cases
  *Return: 0(success)
  */
-void print_alphabet(void)
+int _putchar(char c);
+void print_alphabet(void);
 {
         char letter;
 
