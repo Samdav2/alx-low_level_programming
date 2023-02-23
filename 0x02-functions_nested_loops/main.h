@@ -13,5 +13,5 @@ int main(void)
 void print_alphabet_x10(void);
 {
 	print_alphabet_x10();
-	return;
+	return (0);
 }
