@@ -3,12 +3,6 @@
  * main - prints letter a-z is smaller cases
  *Return: 0(success)
  */
-int _putchar(char c);
-int main(void)
-{
-	print_alphabet();
-	return;
-}
 
 void print_alphabet_x10(void);
 {
