@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - prints letter 10x
+ * print_alphabet_x10 - prints letter 10x
  * Return: 0(success)
  */
 void print_alphabet_x10(void)
@@ -15,7 +15,6 @@ void print_alphabet_x10(void)
 	_putchar(letter);
 	}
 	_putchar('\n');
-        a++;
-        }
+	a++;
+	}
 }
-	
