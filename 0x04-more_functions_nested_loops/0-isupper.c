@@ -6,9 +6,13 @@
  */
 int _isupper(int c)
 {
-	c = 'A';
-	_putchar("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	_putchar("%c: %d\n", c, _isupper(c));
+	if( c >= 'a' && c <= 'z')
+	{
+	return (1);
+	}
+	else
+	{
+	return (0);
+	}
 	return (0);
 }
