@@ -4,15 +4,14 @@
  *Return: 0(success)
  */
 int _putchar(char c);
-void print_alphabet(void)
 int main(void)
 {
-        char letter;
+	print_alphabet();
+	return;
+}
 
-        for (letter = 'a'; letter <= 'z'; letter++)
-                {
-                _putchar(letter);
-                }
-                _putchar('\n');
-             	return;
+void print_alphabet_x10(void);
+{
+	print_alphabet_x10();
+	return;
 }
