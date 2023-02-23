@@ -12,7 +12,6 @@ int mul(int a, int b)
 	a = 98;
 	b = 1024;
 	c = a * b;
-
 	_putchar(("%d\n", c) + '0');
 	return (0);
 }
