@@ -28,6 +28,7 @@ int main(void)
 			printf("%d", i);
 		}
 		i++;
+		printf(" ");
 	}
 	printf("\n");
 	return (0);
