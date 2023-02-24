@@ -3,13 +3,13 @@
  * positive_or_negative - Prints if number is positive or negative
  * Return: 0(success)
  */
-int main(void)
+void positive_or_negative()
 {
 	int i;
 
 	srand (time(0));
 
-	i = read() - RAND_MAX / 2;
+	i = rand() - RAND_MAX / 2;
 	
 	if ( i > 0)
 	{
@@ -19,5 +19,6 @@ int main(void)
 	{
 	printf("%d is negative", i);
 	}
-	return (0);
+	putchar('\n');
+	return;
 }
