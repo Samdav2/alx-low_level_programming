@@ -8,6 +8,7 @@ int main(void)
 	int i = 2, j = 1;
 
 	printf("%d", j);
+	printf(" ");
 
 	while (i < 101)
 	{
