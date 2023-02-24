@@ -5,10 +5,7 @@
  */
 int main(void)
 {
-	int i = 2, j = 1;
-
-	printf("%d", j);
-	printf(" ");
+	int i = 1;
 
 	while (i < 101)
 	{
