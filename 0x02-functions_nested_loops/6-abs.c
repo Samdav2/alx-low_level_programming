@@ -1,19 +1,22 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * _abs - Computes the value of an integer
  * Return: 0(success)
+ * @n: Hols a value
  */
-int _abs(int r)
+int _abs(int n)
 {
-	r = abs(-1);
-	_putchar(('\n', r) + '0');
-	r = _abs(0);
-	_putchar(('\n', r) + '0');
-	r = _abs(1);
-	_putchar(('\n' r) + '0');
-	r = _abs(-98);
-	_putchar(('\n' r) + '0');
-	return (0);
-}
 
+	if (n > 0)
+	{
+	return (n);
+	}
+	else if (n < 0)
+	{
+	return (-n);
+	}
+	else
+	{
+	return (n);
+	}
+}
