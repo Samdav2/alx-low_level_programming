@@ -4,14 +4,7 @@
  * R return: Nothing
  * @s: holds the input value
  */
-void print_rev(char *s)
+void print_rev(char *str)
 {
-	char *str;
-
-	*str = *s;
-
-	while (str == s)
-	{
-	print_rev(str);
-	}
+	print_rev(str);	
 }
