@@ -8,7 +8,7 @@ void print_rev(char *s)
 {
 	char *str;
 
-	s = str;
+	*s = *str;
 	
-	print_rev(str);
+	print_rev(s);
 }
