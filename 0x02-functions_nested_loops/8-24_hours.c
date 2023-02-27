@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * jack_bauer - clock that prints every three minute of the day 
+ * jack_bauer - clock that prints every three minute of the day
  * Return: Nothing
  */
 void jack_bauer(void)
@@ -15,7 +15,7 @@ void jack_bauer(void)
 	{
 	for (d = 0; d <= 9; d++)
 	{
-	if ( a == 2 && b > 3)
+	if (a == 2 && b > 3)
 	{
 	break;
 	}
