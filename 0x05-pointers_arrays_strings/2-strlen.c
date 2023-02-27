@@ -8,7 +8,6 @@ int _strlen(char *s)
 {
 	char a[] = "new";
 	
-	*s = &a;
 	strlen(a);
 	return (0);
 }
