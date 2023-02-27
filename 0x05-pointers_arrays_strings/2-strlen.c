@@ -6,6 +6,6 @@
  */
 int _strlen(char *s)
 {
-	_putchar(("%ld", sizeof(*s)) + '0');
+	size_t strlen(const char *s);
 	return (0);
 }
