@@ -6,7 +6,12 @@
  */
 int _strlen(char *s)
 {
-	*s = *si;
-	size_t strlen(const char *s);
-	return (0);
+	int longi = 0;
+
+	while (*s != "\0")
+	{
+	longi++;
+	s++;
+	}
+	return (longi);
 }
