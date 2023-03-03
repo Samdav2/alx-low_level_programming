@@ -22,7 +22,7 @@ char *_strncat(char *dest, char *str, int n)
 	while (*(str + b) <= n)
 	{
 	*(dest + a) = *(str + b);
-	if (*(str + b) == '\0')
+	if (*(str + b) == n)
 	break;
 	a++;
 	b++;
