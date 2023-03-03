@@ -22,8 +22,6 @@ char *_strncat(char *dest, char *str, int n)
 	while (*(str + b) != '\0' && *(str + b) < n)
 	{
 	*(dest + a) = *(str + b);
-	if (*(str + b) == '\0')
-	break;
 	a++;
 	b++;
 	}
