@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *str, int n)
 	a++;
 	}
 
-	while (*(str + b) != '\0' && *(str + b) < n)
+	while (*(str + b) != '\0' && b < n)
 	{
 	*(dest + a) = *(str + b);
 	a++;
