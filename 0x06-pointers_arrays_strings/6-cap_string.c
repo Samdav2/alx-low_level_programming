@@ -6,21 +6,24 @@
  */
 char *cap_string(char *str)
 {
-	int i;
+	int i,j;
 
-	i = 0;
+	char spe[13] = {' ', '"', '(', ')', '{', '}', '!', '?', '\t', '\n', ';', '.', ','};
 
-	while (str[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-	if (str[i] >= 'a' && str[i] <= 'z' && str[i - 1] == ' ')
-	{
-		str[i] -= 32;
-	}
-	else if (str[i - 1] == '\t' && str[i - 1] == '\n')
-	{
-		str[i] -= 32;
-	}
-	i++;
+		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		for (j = 0; j < 13; j++)
+		{
+			if (str[i] == spe [j])
+			{
+				if (str[i] >= 'a' && str[i] <= 'z')
+				{
+					str[i + 1] -= 32;
+				}
+			}
+		}
 	}
 	return (str);
 }
