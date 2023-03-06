@@ -7,18 +7,23 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	unsigned int bytes = 0;
+	int index;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		if (s[i] == ',' || s[i] == ' ')
+		for (index = 0; accept[index]; index++)
 		{
-		break;
+			if (*s == accept[index])
+			{
+				break;
+				bytes++;
+			}
+
+			else if (accept[index + 1] == '\0')
+				return (bytes);
 		}
-		if (s[i] == accept[i])
-		{
-		i++;
-		}
+		s++;
 	}
-	return (i);
+	return (bytes);
 }
