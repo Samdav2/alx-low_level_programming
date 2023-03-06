@@ -16,9 +16,9 @@ char *cap_string(char *str)
 			str[i] -= 32;
 		for (j = 0; j < 13; j++)
 		{
-			if (str[i] == spe [j])
+			if (str[i] == spe[j])
 			{
-				if (str[i] >= 'a' && str[i] <= 'z')
+				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 				{
 					str[i + 1] -= 32;
 				}
