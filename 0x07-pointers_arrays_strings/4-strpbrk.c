@@ -17,14 +17,7 @@ char *_strpbrk(char *s, char *accept)
 			{
 				return (s + i);
 			}
-
-			else if (s[i] == ',' && s[i] != accept[j])
-			{
-				putchar(',');
-				putchar(' ');
-				continue;
-			}
 		}
 	}
-	return (s);
+	return ('\0');
 }
