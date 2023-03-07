@@ -10,6 +10,10 @@ char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
+<<<<<<< HEAD
 char *_strpbrk(char *s, char *accept);
+=======
+void (char **s, char *to);
+>>>>>>> 08b1718f1326ed1a7c3864a9422ed571be02a061
 
 #endif
