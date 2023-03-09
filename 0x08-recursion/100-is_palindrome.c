@@ -11,12 +11,9 @@ int is_palindrome(char *s)
 	if (*s != '\0')
 	{
 		is_palindrome(s + 1);
-		_putchar(*s);
-		_putchar('\n');
 	}
 
 	if (*s == '\0')
-	_putchar(*s);
 	is_palindrome(s + 1 );
 
 	column = is_palindrome(s + 1);
