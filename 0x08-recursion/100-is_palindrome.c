@@ -4,28 +4,32 @@
  * @s: Holds a string
  * Return: An integer
  */
-int is_palindrome(char *s)
+char print_string(char *s)
 {
-	int column;
 
 	if (*s != '\0')
 	{
 		is_palindrome(s + 1);
-	
-
-		if (*s == '\0')
-		{
-		is_palindrome(s + 1 );
-		}
-
-		column = is_palindrome(s + 1);
 	}
+}
 
-	if (*s == column)
+char print_reverse(char *s)	
+{
+
+	if (*s == '\0')
 	{
+	is_palindrome(s + 1);
+	}
+}
+
+int is_palindrome(char *s)
+{
+
+	if (print_string(s) == print_reverse(s))
+	{	
 	return (1);
 	}
 
-	else 
+	else
 	return (0);
 }
