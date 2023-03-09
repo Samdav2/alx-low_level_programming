@@ -11,6 +11,7 @@ char print_string(char *s)
 	{
 		is_palindrome(s + 1);
 	}
+	return (is_palindrome(s + 1));
 }
 
 char print_reverse(char *s)	
@@ -20,10 +21,11 @@ char print_reverse(char *s)
 	{
 	is_palindrome(s + 1);
 	}
+	return (is_palindrome(s + 1));
 }
 
-char print_strin(char *s);
 char print_reverse(char *s);
+char print_strin(char *s);
 int is_palindrome(char *s)
 {
 
