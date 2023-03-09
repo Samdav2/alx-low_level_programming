@@ -14,12 +14,16 @@ int is_palindrome(char *s)
 	}
 
 	if (*s == '\0')
+	{
 	is_palindrome(s + 1 );
+	}
 
 	column = is_palindrome(s + 1);
 
 	if (*s == column)
+	{
 	return (1);
+	}
 
 	else 
 	return (0);
