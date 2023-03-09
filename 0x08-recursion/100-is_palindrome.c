@@ -22,6 +22,8 @@ char print_reverse(char *s)
 	}
 }
 
+char print_strin(char *s);
+char print_reverse(char *s);
 int is_palindrome(char *s)
 {
 
