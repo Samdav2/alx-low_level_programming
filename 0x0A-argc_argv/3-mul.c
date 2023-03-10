@@ -6,7 +6,7 @@
  * @argv: Arguemnt
  * Return: interger
  */
-int main(char argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{

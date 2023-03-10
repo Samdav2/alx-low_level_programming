@@ -4,7 +4,7 @@
  * @argv: Arguement vector
  * Return: An integer
  */
-int main(char argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
