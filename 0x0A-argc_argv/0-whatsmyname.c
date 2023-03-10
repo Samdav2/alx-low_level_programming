@@ -1,17 +1,13 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - Holds arguements
  * @argc: The size of arquement
  * @argv: Arquement counter
  * Return: 0(success)
  */
-int main(int argc, char* argv)
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	int i;
-	for (i = 0; i < argc; i++)
-	{
-	_putchar(argv[i]);
-	_putchar('\n');
-	}
+	printf("%s\n", argv[0]);
+
 	return (0);
 }
