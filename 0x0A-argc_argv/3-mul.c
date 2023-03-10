@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - Function that multplies two numbers
+ * @argc: Arguement counter
+ * @argv: Arguemnt
+ * Return: interger
+ */
+int main(char argc, char *argv[])
+{
+	if (argc != 3)
+	{
+	printf("Error\n");
+	return (1);
+	}
+
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+
+	return (0);
+}
