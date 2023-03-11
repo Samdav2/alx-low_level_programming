@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * This contains all the prototype of the c function in this or other director
- */i
+ */
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
