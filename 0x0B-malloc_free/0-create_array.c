@@ -8,7 +8,6 @@
 char *create_array(unsigned int size, char c)
 {
 	char *n;
-	unsigned int i;
 
 	if (size == 0)
 	return (NULL);
@@ -23,11 +22,9 @@ char *create_array(unsigned int size, char c)
 	{
 	return (NULL);
 	}
-	for (i = 0; i < size; i++)
-	{
 	n = &c;
-	n = malloc(i * sizeof(char));
+	n = malloc(size  * sizeof(char));
+	printf("%s", n);
 	free (n);
-	}
 	return (n);
 }
