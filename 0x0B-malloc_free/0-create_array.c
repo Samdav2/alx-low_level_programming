@@ -24,11 +24,14 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 	}
 	n = malloc(size  * sizeof(char));
-	free(n);
+	while (*n)
+	{
 	print_array_address(n);
+	}
+	free(n);
 	return (n);
 }
 void print_array_address(char n[])
 {
-	printf("%p", &n);
+	printf("%p", n);
 }
