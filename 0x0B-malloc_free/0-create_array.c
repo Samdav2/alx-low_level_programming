@@ -24,6 +24,6 @@ char *create_array(unsigned int size, char c)
 	}
 	n = malloc(size  * sizeof(char));
 	free (n);
-	printf("%c", n);
+	printf ("%s", n);
 	return (n);
 }
