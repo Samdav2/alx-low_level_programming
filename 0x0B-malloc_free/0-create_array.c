@@ -13,18 +13,16 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 	return (NULL);
 
-	while (i < size)
-	{
-	return (i + create_array(size, c + 1));
+	//while (i < size)
+	//{
+	//return (i + create_array(size, c + 1));
 	
-
 	if (!(n = &c))
 	{
 	return (NULL);
 	}
-	}
 	n = &c;
-	n = malloc(i * sizeof(char));
+	n = malloc(size * sizeof(char));
 	free (n);
 
 	return (n);
