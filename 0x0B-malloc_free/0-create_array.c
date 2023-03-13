@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 	}
 	n = malloc(size  * sizeof(char));
-	printf("%p", &n);
 	free (n);
+	printf("%c", n);
 	return (n);
 }
