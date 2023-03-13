@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 
 	while (i < size)
 	{
-	return (c + create_array(size, c + 1));
+	return (i + create_array(size, c + 1));
 	}
 
 	if (!(n = &c))
@@ -23,6 +23,8 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 	}
 	n = &c;
+	n = malloc(i * sizeof(c));
+	free (n);
 
 	return (n);
 }
