@@ -22,10 +22,10 @@ char *create_array(unsigned int size, char c)
 	{
 	return (NULL);
 	}
+	}
 	n = &c;
 	n = malloc(i * sizeof(char));
 	free (n);
-	}
 
 	return (n);
 }
