@@ -5,6 +5,7 @@
  * @c: The chraacters
  * Return: A character
  */
+void print_array_address(char n[]);
 char *create_array(unsigned int size, char c)
 {
 	char *n;
@@ -23,15 +24,11 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 	}
 	n = malloc(size  * sizeof(char));
-	free (n);
-	printf ("%s", n);
+	free(n);
+	print_array_address(n);
 	return (n);
 }
-/**
- * char *create_array(unsigned int size, char c);
- * int main(void)
- * {
- * printf("%p", &(*create_array));
- * return (0);
- * }
- */
+void print_array_address(char n[])
+{
+	printf("%p", n);
+}
