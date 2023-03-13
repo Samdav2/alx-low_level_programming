@@ -13,11 +13,11 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 
 	/**
-	 * while (i < size)
-	 * {
-	 * return (i + create_array(size, c + 1));
-	 */
-	
+	* while (i < size)
+	* {
+	* return (i + create_array(size, c + 1));
+	*/
+
 	if (!(n = &c))
 	{
 	return (NULL);
@@ -27,10 +27,11 @@ char *create_array(unsigned int size, char c)
 	printf ("%s", n);
 	return (n);
 }
-
-char *create_array(unsigned int size, char c);
-int main(void)
-{
-	printf("%p", &(*create_array));
-	return (0);
-}
+/**
+ * char *create_array(unsigned int size, char c);
+ * int main(void)
+ * {
+ * printf("%p", &(*create_array));
+ * return (0);
+ * }
+ */
