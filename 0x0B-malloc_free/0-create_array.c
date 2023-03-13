@@ -9,6 +9,7 @@ void print_array_address(char n[]);
 char *create_array(unsigned int size, char c)
 {
 	char *n;
+	unsigned int i = 0;
 
 	if (size == 0)
 	return (NULL);
@@ -24,11 +25,12 @@ char *create_array(unsigned int size, char c)
 	return (NULL);
 	}
 	n = malloc(size  * sizeof(char));
-	while (*n)
-	{
-	print_array_address(n);
-	}
 	free(n);
+
+	while (i < size)
+	{
+	print_array_address(n + 1);
+	}
 	return (n);
 }
 void print_array_address(char n[])
