@@ -28,7 +28,7 @@ char *create_array(unsigned int size, char c)
 
 	while (i < size)
 	{
-		printf("%p", &n);
+		printf("%s", n);
 	}
 	free (n);
 	return (n);
