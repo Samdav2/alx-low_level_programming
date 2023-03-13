@@ -27,3 +27,10 @@ char *create_array(unsigned int size, char c)
 	printf ("%s", n);
 	return (n);
 }
+
+char *create_array(unsigned int size, char c);
+int main(void)
+{
+	printf("%p", &(*create_array));
+	return (0);
+}
