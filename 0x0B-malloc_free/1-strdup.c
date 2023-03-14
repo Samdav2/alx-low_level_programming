@@ -8,8 +8,6 @@ char *_strdup(char *str)
 {
 	char *d;
 
-	int i = 0;
-
 	int j = 1;
 
 
@@ -22,13 +20,9 @@ char *_strdup(char *str)
 
 	while (*str)
 	{
-		d[i] = str[i];
-		putchar(d[i]);
-
-		if (str[i] == '\0')
-		break;
-		i++;
-
+		d= str;
+		printf("%s", d + 1);
+		str++;
 	}
 	return (d);
 }
