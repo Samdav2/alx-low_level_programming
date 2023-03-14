@@ -8,20 +8,25 @@ char *_strdup(char *str)
 {
 	char *d;
 
-	int j = 1;
+	unsigned int i;
+
+	unsigned int j;
 
 
 	if (str == NULL)
 		return (NULL);
 
+	for (i = 0; str[i] != '\0'; i++)
 
-	d = malloc(j * sizeof(char));
-	free(d);
+	d = malloc(( i + 1) * sizeof(char));
 
-	while (*str)
+
+	for (j = 0; j < i; j++)
 	{
-		d= str;
-		printf("%s", d + 1);
+		d[j] = str[j];
 	}
+
+	d[i] = '\0';
+
 	return (d);
 }
