@@ -7,8 +7,11 @@
 char *_strdup(char *str)
 {
 	char *d;
+
 	unsigned int i = 0;
+
 	unsigned int j = 1;
+
 	if (str == NULL)
 		return (NULL);
 
@@ -19,8 +22,8 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 	{
 		d[i] = str[i];
-		printf("%s", d + 1);
 		i++;
+		return (d + 1);
 	}
 	return (d);
 }
