@@ -31,7 +31,7 @@ char *create_array(unsigned int size, char c)
 
 	while (i < size)
 	{
-	print_array_address(n + 0);
+	print_array_address(&n[i]);
 	}
 	b = n;
 	return (b);
