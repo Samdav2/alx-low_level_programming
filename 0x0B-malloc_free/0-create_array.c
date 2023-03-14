@@ -30,7 +30,7 @@ char *create_array(unsigned int size, char c)
 
 	while (i < size)
 	{
-	print_array_address(&n[i]);
+	print_array_address(n + 0);
 	}
 	b = n;
 	return (b);
@@ -38,5 +38,5 @@ char *create_array(unsigned int size, char c)
 }
 void print_array_address(char n[])
 {
-	printf("%p ", n);
+	printf("%p ", &n);
 }
