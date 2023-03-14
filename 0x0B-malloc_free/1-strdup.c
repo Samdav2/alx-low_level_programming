@@ -16,6 +16,6 @@ char *_strdup(char *str)
 	d = malloc(i * sizeof(char));
 	free(d);
 	}
-	d = str;
+	str = d;
 	return (d);
 }
