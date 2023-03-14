@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL || s2 == NULL)
 	putchar('\0');
 
-	for (i = 0; s1[i] = '\0'; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 		for (j = 0; s2[j] != '\0'; j++)
 		{
@@ -27,6 +27,5 @@ char *str_concat(char *s1, char *s2)
 	a[k] = s1[i] + s2[j];
 	free(a);
 	return (a);
-
 	
 }
