@@ -22,7 +22,6 @@ char *_strdup(char *str)
 	{
 		d= str;
 		printf("%s", d + 1);
-		str++;
 	}
 	return (d);
 }
