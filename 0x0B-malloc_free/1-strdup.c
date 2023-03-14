@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 	{
 		d[i] = str[i];
-		putchar(d[0]);
+		putchar(d[i]);
 
 		if (str[i] == '\0')
 		break;
