@@ -12,6 +12,9 @@ char *_strdup(char *str)
 
 	unsigned int j = 1;
 
+	unsigned int k;
+
+
 	if (str == NULL)
 		return (NULL);
 
@@ -21,8 +24,11 @@ char *_strdup(char *str)
 
 	while (str[i] != '\0')
 	{
-		d[i] = str[i];
-		putchar(d[i]);
+		for (k = 0; k < i; k++)
+		{
+		d[k] = str[i];
+		putchar(d[k]);
+		}
 		i++;
 	}
 	return (d);
