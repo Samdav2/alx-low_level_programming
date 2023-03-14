@@ -27,6 +27,7 @@ char *create_array(unsigned int size, char c)
 	}
 	n = malloc(size  * sizeof(char));
 	free(n);
+	n = n;
 
 	while (i < size)
 	{
@@ -38,5 +39,5 @@ char *create_array(unsigned int size, char c)
 }
 void print_array_address(char n[])
 {
-	printf("%p ", &n);
+	printf("%d ", n);
 }
