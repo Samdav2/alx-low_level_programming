@@ -32,7 +32,7 @@ char *create_array(unsigned int size, char c)
 	{
 	print_array_address(&n[i]);
 	}
-	n = b;
+	b = n;
 	return (b);
 
 }
