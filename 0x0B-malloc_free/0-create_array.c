@@ -10,6 +10,7 @@ char *create_array(unsigned int size, char c)
 {
 	char *n;
 	unsigned int i = 0;
+	char *b;
 
 	if (size == 0)
 	return (NULL);
@@ -31,10 +32,11 @@ char *create_array(unsigned int size, char c)
 	{
 	print_array_address(&n[i]);
 	}
-	return (n);
+	n = b;
+	return (b);
+
 }
 void print_array_address(char n[])
 {
-	unsigned int i;
-	printf("0x%02x ", n[i]);
+	printf("%p ", n);
 }
