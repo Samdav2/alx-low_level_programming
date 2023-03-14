@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 	{
 		d[i] = str[i];
-		return (d + 1);
+		printf("%s", d[i]);
 		i++;
 	}
 	return (d);
