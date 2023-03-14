@@ -35,5 +35,5 @@ char *create_array(unsigned int size, char c)
 }
 void print_array_address(char n[])
 {
-	printf("%p" , n);
+	printf("%p ", n);
 }
