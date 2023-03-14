@@ -29,11 +29,11 @@ char *create_array(unsigned int size, char c)
 
 	while (i < size)
 	{
-	print_array_address(n);
+	print_array_address(n + 0);
 	}
 	return (n);
 }
 void print_array_address(char n[])
 {
-	printf("%p ", n[0]);
+	printf("%p ", n);
 }
