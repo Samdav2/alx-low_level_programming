@@ -8,7 +8,6 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *a;
-	char *b;
 	unsigned int i;
 	unsigned int j;
 	unsigned int s;
@@ -33,10 +32,10 @@ char *str_concat(char *s1, char *s2)
 	if (a == NULL)
 		return (NULL);
 
-	for (y = 0; s1[y] < i; y++)
+	for (y = 0; y < i; y++)
 		a[y] = s1[y];
 
-	for (z = 0; s2[z] < j; z++)
+	for (z = 0; z < j; z++)
 		a[y] = s2[z];
 
 	return (a);
