@@ -8,25 +8,31 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *a;
-	unsigned int i = 0;
+	char *b;
+	unsigned int i;
 	unsigned int j;
-	unsigned int k = 0;
+	unsigned int k;
+	unsigned int s;
+	unsigned int y;
+	unsigned int z;
 
 	if (s1 == NULL || s2 == NULL)
 	putchar('\0');
+	
+	for (i = 0; s1[i] != '\0'; i++)
+		y++;
 
-	while (s1[i] != '\0')
-	{
-		for (j = 0; s2[j] != '\0'; j++)
 
-			k++;
-		i++;
+	for (j = 0; s2[j] != '\0'; j++)
+		z++;
 
-	}
+	s = y + z;
 
-	a = malloc((k + 1) * sizeof(char));
-	a[k] = s1[i] && s2[j];
+	a = malloc((s + 1) * sizeof(char));
+	b[i] = s1[i]
+	a[j] = s2[j];
+	a[j] = b[i]
 	free(a);
-	a[k] = '\0';
+	a[s] = '\0';
 	return (a);
 }
