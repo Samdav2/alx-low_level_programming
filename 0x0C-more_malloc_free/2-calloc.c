@@ -3,7 +3,7 @@
  * _calloc - Functions that allocates memory for an array
  * @nmemb: Number
  * @size: The Size
- * Retunrn: Nothing
+ * Return: Nothing
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -19,6 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = malloc(j);
 
 	if (ptr == NULL)
+
 		return(NULL);
 
 	for (i = 0; i < j; i++)
