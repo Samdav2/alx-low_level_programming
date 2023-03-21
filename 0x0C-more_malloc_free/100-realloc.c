@@ -50,7 +50,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			ptr2[j] = ((char *)ptr)[j];
 		}
-		free (ptr)
+		free(ptr);
 		return (ptr2);
 	}
 }
