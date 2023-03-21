@@ -3,7 +3,7 @@
  * string_nconcat - Concatenate Two string
  * @s1: First String
  * @s2: Second String
- * @n - Number of Strig
+ * @n: Number of Strig
  * Return: A string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
