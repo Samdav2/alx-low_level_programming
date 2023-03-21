@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * _realloc - Function that reallocate a memory
- * ptr: pointer
- * old_size: The memory size
- * new_size: The new memory size
+ * @ptr: pointer
+ * @old_size: The memory size
+ * @new_size: The new memory size
  * Return: Nothing
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -17,10 +17,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == NULL)
 	{
 		ptr = malloc(new_size);
-
 		if (ptr == NULL)
 			return (NULL);
-
 		return (ptr);
 	}
 
@@ -38,7 +36,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		for (i = 0; i < old_size; i++)
 		{
-			ptr2[i] = ((char *)ptr)[i];
+		ptr2[i] = ((char *)ptr)[i];
 		}
 		free(ptr);
 		return (ptr2);
@@ -46,9 +44,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	else
 	{
-		for(j = 0; j < new_size; j++)
+		for (j = 0; j < new_size; j++)
 		{
-			ptr2[j] = ((char *)ptr)[j];
+		ptr2[j] = ((char *)ptr)[j];
 		}
 		free(ptr);
 		return (ptr2);
