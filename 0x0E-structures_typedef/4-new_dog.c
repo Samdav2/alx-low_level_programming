@@ -40,7 +40,7 @@ char *_strcopy(char *dest, char *src)
 }
 
 /**
- * new dog - create a new dog
+ * new_dog - create a new dog
  * @name: The name of the new dog
  * @age: The age of the dog
  * @owner: The owner of the dog
@@ -73,5 +73,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->owner = _strcopy(dog->owner, owner);
 
 	return (dog);
-
 }
