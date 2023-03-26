@@ -8,4 +8,14 @@
  * Return: Nothing
  */
 void array_iterator(int *array,  site_t size, void(*action)(int))
+{
+	size_t i;
 
+	if (!array || !size || !action)
+		return;
+
+	for (i = 0; i < size; i++)
+	{
+		action(array[i]);
+	}
+}
