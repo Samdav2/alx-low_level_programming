@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - check the code for holberton school students 
+ * main - check the code for holberton school students
  * @argc: arguement count
  * @argv: arguement vector
  * Return: Always 0
