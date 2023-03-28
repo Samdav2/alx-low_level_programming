@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 	}
 
 	unsigned char *main_addr = (unsigned char *)main;
+
 	for (i = 0; i < num_bytes; i++)
 	{
 	printf("%02x ", *(main_addr + i));
