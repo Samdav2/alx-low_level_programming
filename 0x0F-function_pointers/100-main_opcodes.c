@@ -1,36 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - Program that prints opcodes of it own main function
- * @argc: arguement counter
- * @argv: Vector
- * Return: Success
+ * main - prints its own opcodes
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int bytes, i;
+	char *arr;
 
 	if (argc != 2)
 	{
-	printf("Error\n");
-	return (1);
+		printf("Error\n");
+		exit(1);
 	}
 
-	int num_bytes = atoi(argv[1]);
+	bytes = atoi(argv[1]);
 
-	if (num_bytes < 0)
+	if (bytes < 0)
 	{
-	printf("Error\n");
-	return (2);
+		printf("Error\n");
+		exit(2);
 	}
 
-	unsigned char *main_addr = (unsigned char *)main;
+	arr = (char *)main;
 
-	for (i = 0; i < num_bytes; i++)
+	for (i = 0; i < bytes; i++)
 	{
-	printf("%02x ", *(main_addr + i));
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
 	}
-	printf("\n");
-
 	return (0);
 }
