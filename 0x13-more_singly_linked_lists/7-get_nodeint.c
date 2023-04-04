@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_nondeint_at_index - C functions that returns the position of a linked list
+ * get_nodeint_at_index - C functions that returns the position of a linked list
  * @head: The head of a list
  * @index: The index of a node
  * Return: The of a null or if does not exist
