@@ -6,7 +6,7 @@
  * @n: Integer 
  * Return: The address of the new node or null if failed
  */
-listint_t *insert_nodeint_at_index(listint **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new, *cur, *pr, *temp;
 
