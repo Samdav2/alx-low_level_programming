@@ -17,18 +17,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *ptr;
 
 	if (filename == NULL)
-
 		return (0);
-	
-	ptr = fopen(filename, "r");
 
+	ptr = fopen(filename, "r");
 	if (ptr == NULL)
 	{
 		return (0);
 	}
 
-	buffer = malloc(letters+ 1);
-
+	buffer = malloc(letters + 1);
 	if (buffer == NULL)
 	{
 		fclose(ptr);
@@ -37,24 +34,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	read = fread(buffer, sizeof(char), letters, ptr);
-
 	if (read < 0)
 	{
 		read = 0;
 	}
 
 	write = fwrite(buffer, sizeof(char), read, stdout);
-
 	if (write != read)
 	{
 	 read = 0;
 	}
-
 	free(buffer);
-
 	fclose(ptr);
-
 	return (read);
-
-
 }
