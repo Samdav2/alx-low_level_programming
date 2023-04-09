@@ -29,7 +29,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 	{
 		fclose(ptr);
-
 		return (0);
 	}
 
@@ -42,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	write = fwrite(buffer, sizeof(char), read, stdout);
 	if (write != read)
 	{
-	 read = 0;
+	 	read = 0;
 	}
 	free(buffer);
 	fclose(ptr);
