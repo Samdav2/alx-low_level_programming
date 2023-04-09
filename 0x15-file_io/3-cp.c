@@ -8,7 +8,7 @@
  */
 int copy(int argc, char *argv[])
 {
-	int i, k, ptr;
+	int w, i, k, ptr;
 
 	char buffer[1024];
 
