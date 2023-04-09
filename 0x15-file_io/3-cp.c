@@ -25,7 +25,7 @@ int copy(int argc, char *argv[])
 
 	ptr = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
-	open(argv[2], O_RONLY);
+	open(argv[2], O_RDONLY);
 
 	if (argv[1] == NULL)
 	{
