@@ -10,12 +10,9 @@ int copy(int argc, char *argv[])
 {
 	int i, ptr;
 
-	char buffer = 1024;
+	char buffer[1024];
 
 	char *l;
-
-
-	k = 0;
 
 	for (i = 0; i < argc; i++)
 		;
@@ -29,7 +26,7 @@ int copy(int argc, char *argv[])
 
 	l = argv[2];
 
-	ptr = open(argv[1], O_RDWR | O_TRUNC, buffer[]);
+	ptr = open(argv[1], O_RDWR | O_TRUNC, buffe);
 
 	write(ptr, l, buffer);
 
