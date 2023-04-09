@@ -29,7 +29,7 @@ int copy(int argc, char *argv[])
 
 	l = argv[2];
 
-	ptr = open(argv[1], O_RDWR | O_TRUNC, buffer[k + 1]);
+	ptr = open(argv[1], O_RDWR | O_TRUNC, buffer[]);
 
 	write(ptr, l, buffer[i + 1]);
 
