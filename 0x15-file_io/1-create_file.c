@@ -10,7 +10,7 @@ int create_file(const char *filename, char *text_content)
 {
 	FILE *ptr;
 
-	ptr = fopen(filename, "w");
+	int i, w;
 
 	if (ptr == NULL)
 	{
@@ -21,14 +21,18 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	
+	for (i = 0; *(text_content + i); i++)
+		;
 
-	if (text_content)
-	{
-		ptr = fopen(filename, "w");
+	ptr = fopen(filename, | O_CREATE | O_RDWR | O_TRUNC, 0600);
 
-	}
+	w = write(ptr, text_content, i);
 
-	ptr = fopen(filename, "w");
+	if (ptr == -1 || w == -1)
+		return (-1);
+
+	fclose(ptr);
 
 	return (1);
 }
