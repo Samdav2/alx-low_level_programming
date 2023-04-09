@@ -8,9 +8,9 @@
  */
 int copy(int argc, char *argv[])
 {
-	int i, k, ptr;
+	int i, ptr;
 
-	char buffer[1024];
+	char buffer = 1024;
 
 	char *l;
 
@@ -31,7 +31,7 @@ int copy(int argc, char *argv[])
 
 	ptr = open(argv[1], O_RDWR | O_TRUNC, buffer[]);
 
-	write(ptr, l, buffer[i + 1]);
+	write(ptr, l, buffer);
 
 	if (argv[1] == NULL)
 	{
