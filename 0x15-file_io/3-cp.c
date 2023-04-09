@@ -26,9 +26,9 @@ int copy(int argc, char *argv[])
 
 	l = argv[2];
 
-	ptr = open(argv[1], O_RDWR | O_TRUNC, 0664);
+	ptr = open(argv[1], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
-	write(ptr, l, buffer, 1024);
+	read(ptr, l, buffer, 1024);
 
 	if (argv[1] == NULL)
 	{
