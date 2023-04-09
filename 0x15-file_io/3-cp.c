@@ -31,9 +31,9 @@ int copy(int argc, char *argv[])
 
 	l = argv[2];
 
-	ptr = open(argv[1], O_READ | O_TRUNC, buffer[k + 1]);
+	ptr = open(argv[1], O_RDWR | O_TRUNC, buffer[k + 1]);
 
-	w = write(ptr, l, O_WRITE | buffer[i + 1]);
+	w = write(ptr, l, | buffer[i + 1]);
 
 	if (argv[1] == NULL)
 	{
