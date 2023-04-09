@@ -27,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 		ptr = fopen(filename, "w");
 
 	}
-	
+
 	ptr = fopen(filename, "w");
 
 	return (1);
