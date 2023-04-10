@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 		__exit(98, argv[1], 0);
 
 
-	while ((j = read(ptr, buffer, 1024)) !=0)
+	while ((j = read(ptr, buffer, 1024)) != 0)
 	{
 		if (j == -1)
 
