@@ -3,12 +3,12 @@
 /**
  * __exit - C function that print error message with exit value
  * @error: The error number or file decriptor
- * @str: Name of the filename with error
- * f: The file descriptor
+ * @s: Name of the filename with error
+ * fd: The file descriptor
  *
  * Return: 0 for success
  */
-int __exit(int error, char *str, int f)
+int __exit(int error, char *s, int fd)
 {
 	switch (error)
 	{
@@ -16,13 +16,13 @@ int __exit(int error, char *str, int f)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(error);
 	case 98:
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", str);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
 		exit(error);
 	case 99:
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
 		exit(error);
 	case 100:
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(error);
 	default:
 		return (0);
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	char *buffer[1024];
 
 
-	if (argc > 3 || argc < 2)
+	if (argc != 3)
 
 		__exit(97, NULL, 0);
 
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		__exit(99, argv[2], 0);
 
 
-	ptr = open(argv[2], O_RDONLY);
+	ptr = open(argv[1], O_RDONLY);
 
 	if (ptr == -1)
 		__exit(98, argv[1], 0);
