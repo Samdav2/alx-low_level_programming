@@ -8,9 +8,9 @@
  */
 int copy(int argc, char *argv[])
 {
-	int i, ptr;
+	int i, j, k, ptr, ptr2;
 
-	/*char *buffer[1024];*/
+	char *buffer[1024];
 
 	for (i = 0; i < argc; i++)
 		;
@@ -25,7 +25,22 @@ int copy(int argc, char *argv[])
 
 	ptr = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
-	open(argv[2], O_RDONLY);
+	ptr2 = open(argv[2], O_RDONLY);
+
+	while ((j = read(ptr, buffer, 1024)) !=0)
+	{
+		if (j == -1)
+
+			__exit(98, argv[1], 0);
+
+		k = write(ptr2, buffer, j);
+		if (k == -1)
+
+			__exit(99, argv[2], 0);
+	}
+
+
+
 
 	if (argv[1] == NULL)
 	{
@@ -41,6 +56,7 @@ int copy(int argc, char *argv[])
 	}
 
 	close(ptr);
+	close(ptr2);
 
 	return (0);
 }
