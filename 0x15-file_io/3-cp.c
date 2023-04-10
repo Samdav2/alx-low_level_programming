@@ -31,12 +31,12 @@ int copy(int argc, char *argv[])
 	{
 		if (j == -1)
 
-			__exit(98, argv[1], 0);
+			_exit(98, argv[1], 0);
 
 		k = write(ptr2, buffer, j);
 		if (k == -1)
 
-			__exit(99, argv[2], 0);
+			_exit(99, argv[2], 0);
 	}
 
 
