@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _exit - C function that print error message with exit value
+ * __exit - C function that print error message with exit value
  * @error: The error number or file decriptor
  * @str: Name of the filename with error
  * f: The file descriptor
  *
  * Return: 0 for success
  */
-int _exit(int error, char *str, int f)
+int __exit(int error, char *str, int f)
 {
 	switch (error)
 	{
@@ -16,7 +16,7 @@ int _exit(int error, char *str, int f)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(error);
 	case 98:
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n" str);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", str);
 		exit(error);
 	case 99:
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
@@ -39,41 +39,41 @@ int _exit(int error, char *str, int f)
  */
 int copy(int argc, char *argv[])
 {
-	int i, j, k, ptr, ptr2;
+	int j, k, ptr, ptr2;
 
 	char *buffer[1024];
 
 
 	if (argc > 3 || argc < 2)
 
-		_exit(97, NULL, 0);
+		__exit(97, NULL, 0);
 
 
 	ptr2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
 	if (ptr2 == -1)
-		_exit(99, argv[2], 0);
+		__exit(99, argv[2], 0);
 
 
 	ptr = open(argv[2], O_RDONLY);
 
 	if (ptr == -1)
-		_exit(98, argv[1], 0);
+		__exit(98, argv[1], 0);
 
 
 	while ((j = read(ptr, buffer, 1024)) !=0)
 	{
 		if (j == -1)
 
-			_exit(98, argv[1], 0);
+			__exit(98, argv[1], 0);
 
 		k = write(ptr2, buffer, j);
 		if (k == -1)
 
-			_exit(99, argv[2], 0);
+			__exit(99, argv[2], 0);
 	}
 
-	close(ptr2) == -1 ? (_exit(100, NULL, ptr2)) : close(ptr2);
-	close(ptr) == -1 ? (_exit(100, NULL, ptr)) : close(ptr);
+	close(ptr2) == -1 ? (__exit(100, NULL, ptr2)) : close(ptr2);
+	close(ptr) == -1 ? (__exit(100, NULL, ptr)) : close(ptr);
 	return (0);
 }
