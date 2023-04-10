@@ -4,7 +4,7 @@
  * __exit - C function that print error message with exit value
  * @error: The error number or file decriptor
  * @s: Name of the filename with error
- * fd: The file descriptor
+ * @fd: The file descriptor
  *
  * Return: 0 for success
  */
@@ -35,7 +35,7 @@ int __exit(int error, char *s, int fd)
  * @argv: The arguement vector
  * @argc: The arguement counter
  *
- * Return 0 for success
+ * Return: 0 for success
  */
 int main(int argc, char *argv[])
 {
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	char *buffer[1024];
 
 
-	if (argc != 3)
+	if (argc !=  3)
 
 		__exit(97, NULL, 0);
 
