@@ -31,13 +31,13 @@ int __exit(int error, char *str, int f)
 
 
 /**
- * copy - C file that copy the content of a file to another
+ * main - C file that copy the content of a file to another
  * @argv: The arguement vector
  * @argc: The arguement counter
  *
  * Return 0 for success
  */
-int copy(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int j, k, ptr, ptr2;
 
