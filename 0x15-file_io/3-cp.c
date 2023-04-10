@@ -1,4 +1,35 @@
 #include "main.h"
+
+/**
+ * _exit - C function that print error message with exit value
+ * @error: The error number or file decriptor
+ * @str: Name of the filename with error
+ * f: The file descriptor
+ *
+ * Return: 0 for success
+ */
+int _exit(int error, char *str, int f)
+{
+	switch (error)
+	{
+	case 97:
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(error);
+	case 98:
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n" str);
+		exit(error);
+	case 99:
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
+		exit(error);
+	case 100:
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f);
+		exit(error);
+	default:
+		return (0);
+	}
+}
+
+
 /**
  * copy - C file that copy the content of a file to another
  * @argv: The arguement vector
@@ -12,51 +43,37 @@ int copy(int argc, char *argv[])
 
 	char *buffer[1024];
 
-	for (i = 0; i < argc; i++)
-		;
 
 	if (argc > 3 || argc < 2)
-	{
-		exit(97);
-		printf("usage: file_from to file_to");
-	}
+
+		_exit(97, NULL, 0);
 
 
+	ptr2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
-	ptr = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (ptr2 == -1)
+		_exit(99, argv[2], 0);
 
-	ptr2 = open(argv[2], O_RDONLY);
+
+	ptr = open(argv[2], O_RDONLY);
+
+	if (ptr == -1)
+		_exit(98, argv[1], 0);
+
 
 	while ((j = read(ptr, buffer, 1024)) !=0)
 	{
 		if (j == -1)
 
-			exit(98);
+			_exit(98, argv[1], 0);
 
 		k = write(ptr2, buffer, j);
 		if (k == -1)
 
-			exit(99);
+			_exit(99, argv[2], 0);
 	}
 
-
-
-
-	if (argv[1] == NULL)
-	{
-		exit(98);
-
-		printf("%s Error: Can't read from the file", argv[1]);
-	}
-
-	if (!(argv[2]))
-	{
-		exit(99);
-		printf("%s Error: Can't write to", argv[2]);
-	}
-
-	close(ptr);
-	close(ptr2);
-
+	close(ptr2) == -1 ? (_exit(100, NULL, ptr2)) : close(ptr2);
+	close(ptr) == -1 ? (_exit(100, NULL, ptr)) : close(ptr);
 	return (0);
 }
