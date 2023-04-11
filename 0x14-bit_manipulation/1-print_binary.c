@@ -3,7 +3,7 @@
  * print_binary - C function that prints the binary of a number
  * @n: The binary number to be printed
  *
- * Return: The number converted
+ * Return: nothing
  */
 void print_binary(unsigned long int n)
 {
@@ -42,8 +42,7 @@ void print_binary(unsigned long int n)
 			break;
 		}
 
-		else 
-
+		else
 		{
 			_putchar('0');
 			i >>= 1;
