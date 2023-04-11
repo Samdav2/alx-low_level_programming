@@ -7,17 +7,46 @@
  */
 void print_binary(unsigned long int n)
 {
-	int binary[32], j, i = 0;
+	unsigned long int i, j;
+
+	i = 1;
+
+	if (n == 0)
+		_putchar('0');
+
+	while (i <= n)
+		i *= 2;
+	i >>= 1;
 
 	while (n > 0)
 	{
-		binary[i] = n & 1;
-		n = n >> 1;
-		i++;
-	}
+		if (n > i)
+		{
+			_putchar('1');
+			n -= i;
+			i >>= 1;
+		}
 
-	for (j = i - 1; j >= 0; j--)
-	{
-		printf("%d", binary[j]);
+		else if (n == i)
+		{
+			_putchar('1');
+
+			j = (i >> 1);
+
+			if (j > 0)
+			{
+				for (i = j; i > 0; i >>= 1)
+					_putchar('0');
+			}
+
+			break;
+		}
+
+		else 
+
+		{
+			_putchar('0');
+			i >>= 1;
+		}
 	}
 }
