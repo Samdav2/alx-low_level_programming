@@ -1,9 +1,4 @@
-#!/bin/bash
-
-C_FILES=$(ls *.c)
-
-for file in $C_FILES
-do
-    gcc -c $file
-done
-ar rcs liball.a *.o
+#!/bin/bash\
+gcc -Wall -pedantic -Werror -Wextra -C *.c
+ar rc liball.a *.o
+ranlib liball.o
