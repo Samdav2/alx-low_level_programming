@@ -9,7 +9,7 @@ int isnumber(const char *input)
 	int i;
 	for (i = 0; input[i] != '\0'; i++)
 	{
-		if (input[i] < '0' || input[i] > '9')
+		if (!isdigit(input[i]) && input[i] != '-' && input[i] != '+')
 		{
 			return (0);
 		}
@@ -29,23 +29,24 @@ int main(int argc, char *argv[])
 	int i;
 	int b = 0;
 
-	for(i = 0; i < argc;)
+	if(argc == 0)
+	{
+		printf("0\n");
+	}
+
+
+	for(i = 1; i < argc; i++)
 	{
 		char *input = argv[1];
 		if (isnumber(input))
 		{
 			b += atoi(argv[i]);
 		}
-		else if (argv[i] == NULL)
-		{
-			printf("0\n");
-		}
 		else
 		{
 			printf("Error\n");
-			return (i);
+			return (1);
 		}
-		i++;
 	}
 
 
