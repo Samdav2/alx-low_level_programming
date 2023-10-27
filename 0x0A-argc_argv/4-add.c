@@ -36,16 +36,20 @@ int main(int argc, char *argv[])
 		{
 			b += atoi(argv[i]);
 		}
+		else if (argv[i] == NULL)
+		{
+			printf("0\n");
+		}
 		else
 		{
-			printf("Error");
+			printf("Error\n");
 			return (i);
 		}
 		i++;
 	}
 
 
-	printf("%d", b);
+	printf("%d\n", b);
 
 	return (0);
 }
