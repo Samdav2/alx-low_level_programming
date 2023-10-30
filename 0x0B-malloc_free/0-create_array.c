@@ -26,7 +26,7 @@ char *create_array(unsigned int size, char c)
 
 		ptr = c;
 
-		printf("0x%02x", ptr);
+		printf("0x%02x", c);
 	}
 
 	free(ptr);
