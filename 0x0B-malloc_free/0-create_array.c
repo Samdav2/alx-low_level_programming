@@ -9,9 +9,9 @@ char *create_array(unsigned int size, char c)
 {
 
 	unsigned int i = 0;
+	char ptr;
 
-	create_array = malloc(size + 1) * sizeof(char);
-
+	ptr = malloc((size + 1) * sizeof(char));
 
 	for (i = 0; i < size; i++)
 	{
@@ -24,10 +24,12 @@ char *create_array(unsigned int size, char c)
 			printf("\n");
 		}
 
+		*ptr = c;
+
 		printf("0x%02x", c);
 	}
 
-	free(create_array);
+	free(c);
 
 	return (0);
 }
