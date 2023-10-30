@@ -7,12 +7,12 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *ptr;
+	unsigned long int *ptr;
 
 	unsigned int i = 0;
 	int j = 0;
 	
-	ptr = (char *)malloc(j + 1) * sizeof(char);
+	ptr = malloc(j + 1) * sizeof(char);
 
 	for (i = 0; i < size; i++)
 	{
