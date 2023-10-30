@@ -18,15 +18,12 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < lenght; i++)
 	{
-		for (j = i; j < lenght; j++)
-		{
-			if (s1 == NULL || s2 == NULL)
-			{
-				return ("");
-			}
-			pointer[i] = s1[i];
-			pointer[j] = s2[j];
-		}
+		pointer[i] = s1[i];
+	}
+
+	for (j = i; j < lenght; j++)
+	{
+		pointer[j] = s2[j];
 	}
 	pointer[lenght] = '\0';
 	return (pointer);
