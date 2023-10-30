@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 		{
 			printf (" ");
 		}
-		if (!(i % 10) i)
+		if (!(i % 10) && i)
 		{
 			printf("\n");
 		}
