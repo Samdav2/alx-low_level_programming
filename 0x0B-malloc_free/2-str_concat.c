@@ -16,16 +16,16 @@ char *str_concat(char *s1, char *s2)
 
 	pointer = malloc((lenght + 1) * sizeof(char));
 
-	for (i = 0; i < lenght; i++)
+	for (i = 0; s1 != NULL && S1[i] && '\0'; i++)
 	{
 		pointer[i] = s1[i];
 	}
 
-	for (i = 0; j < lenght; j++)
+	for (i = 0; s2 != NULL && s2[j] != '\0'; j++)
 	{
 
 		pointer[i + j] = s2[j];
 	}
-	pointer[lenght] = '\0';
+	pointer[i + j] = '\0';
 	return (pointer);
 }
