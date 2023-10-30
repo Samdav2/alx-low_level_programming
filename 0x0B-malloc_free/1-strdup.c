@@ -30,7 +30,5 @@ char *_strdup(char *str)
 	}
 
 	pointer[i] = '\0';
-
-	free(pointer);
 	return (pointer);
 }
