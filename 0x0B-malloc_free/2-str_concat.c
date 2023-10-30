@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < lenght; i++)
 	{
-		for ( j = i; j < lenght; j++)
+		for (j = i; j < lenght; j++)
 		{
 			if (s1 == NULL || s2 == NULL)
 			{
@@ -28,6 +28,6 @@ char *str_concat(char *s1, char *s2)
 			pointer[j] = s2[j];
 		}
 	}
-	pointer[i] = '\0';
+	pointer[lenght] = '\0';
 	return (pointer);
 }
