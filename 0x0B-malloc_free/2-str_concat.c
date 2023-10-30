@@ -10,6 +10,7 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 	char *pointer;
+	int lenght;
 
 	lenght = (strlen(s1) + strlen(s2));
 
