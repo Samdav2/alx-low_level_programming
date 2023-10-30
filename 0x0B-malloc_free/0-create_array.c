@@ -13,6 +13,15 @@ char *create_array(unsigned int size, char c)
 
 	for (i = 0; i < size; i++)
 	{
+		if (i % 10)
+		{
+			printf (" ");
+		}
+		if (!(i % 10) i)
+		{
+			printf("\n");
+		}
+
 		printf("0x%02x", c);
 	}
 
