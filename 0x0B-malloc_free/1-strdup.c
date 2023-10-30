@@ -29,6 +29,8 @@ char *_strdup(char *str)
 		pointer[i] = str[i];
 	}
 
+	pointer[i] = '\0';
+
 	free(pointer);
 	return (pointer);
 }
