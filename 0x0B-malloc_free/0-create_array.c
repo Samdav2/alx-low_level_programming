@@ -9,30 +9,24 @@ char *create_array(unsigned int size, char c)
 {
 
 	unsigned int i = 0;
-	int *ptr;
-	int j = 0;
+	char *ptr;
 
-	ptr = (int *)malloc((j + 1) * sizeof(int));
-
-	for (i = 0; i < size;)
+	if (size == NULL)
 	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-
-		*ptr = c;
-
-		printf("0x%02x", c);
-		j++;
-		i++;
+		return (NULL);
 	}
 
-	free(ptr);
+	ptr = malloc(size * sizeof(char));
 
-	return (0);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < size; i++)
+	{
+		ptr[i] = c;
+	}
+
+	return (ptr);
 }
