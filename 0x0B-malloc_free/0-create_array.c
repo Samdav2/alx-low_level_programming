@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 
 	ptr = (unsigned int *)malloc((j + 1) * sizeof(int));
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size;)
 	{
 		if (i % 10)
 		{
@@ -29,6 +29,7 @@ char *create_array(unsigned int size, char c)
 
 		printf("0x%02x", c);
 		j++;
+		i++;
 	}
 
 	free(ptr);
