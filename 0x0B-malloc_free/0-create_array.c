@@ -10,8 +10,9 @@ char *create_array(unsigned int size, char c)
 
 	unsigned int i = 0;
 	unsigned int *ptr;
+	int j = 0;
 
-	ptr = malloc((size) * sizeof(int));
+	ptr = malloc((j) * sizeof(int));
 
 	for (i = 0; i < size; i++)
 	{
@@ -27,6 +28,7 @@ char *create_array(unsigned int size, char c)
 		*ptr = c;
 
 		printf("0x%02x", c);
+		j++;
 	}
 
 	free(ptr);
