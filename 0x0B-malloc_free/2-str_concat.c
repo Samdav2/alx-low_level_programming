@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < lenght; i++)
 	{
-		if (s1[i] == ' ')
+		if (s1[i] == '\0')
 		{
 			continue;
 		}
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; j < lenght; j++)
 	{
-		if (s2[j] == NULL)
+		if (s2[j] == '\0')
 		{
 			continue;
 		}
