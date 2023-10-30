@@ -10,9 +10,10 @@ char *create_array(unsigned int size, char c)
 
 	unsigned int i = 0;
 
+
 	for (i = 0; i < size; i++)
 	{
-		printf(" %c", c);
+		printf("0x%02x", c);
 	}
 
 	return (0);
