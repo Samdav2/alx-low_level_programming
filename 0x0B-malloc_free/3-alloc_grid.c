@@ -7,8 +7,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i;
-	int *pointer;
+	int **pointer;
 	int multi;
 
 	if (width == 0)
