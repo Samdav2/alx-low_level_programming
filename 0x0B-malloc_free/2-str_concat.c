@@ -13,8 +13,14 @@ char *str_concat(char *s1, char *s2)
 	int j;
 
 	lenght = (strlen(s1) + strlen(s2));
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		S2 = "";
 
 	pointer = malloc((lenght + 1) * sizeof(char));
+	if (pointer == NULL)
+		return (NULL);
 
 	for (i = 0; i < lenght; i++)
 		pointer[i] = s1[i];
