@@ -7,8 +7,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 	int lenght;
 
 	lenght = (strlen(s1) + strlen(s2));
@@ -30,5 +30,4 @@ char *str_concat(char *s1, char *s2)
 	j++;
 	}
 	return (s1);
-	free (s1);
 }
