@@ -18,23 +18,16 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	multi = height * width;
-
 	pointer = malloc((multi + 1) * sizeof(int));
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		pointer[i] = 0;
+		for (j = 0; j < width; j++)
+		{
+			pointer[i][j] = 0;
+		}
 	}
-
-	for (j = 0; j < height; j++)
-	{
-		pointer[j] = 0;
-	}
-
-
 	if (pointer == NULL)
 		return(NULL);
-
 	return (pointer);
-
 }
