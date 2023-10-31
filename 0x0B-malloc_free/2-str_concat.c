@@ -7,10 +7,10 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int lenght;
+	unsigned int lenght;
 	char *pointer;
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	lenght = (strlen(s1) + strlen(s2));
 	if (s1 == NULL)
