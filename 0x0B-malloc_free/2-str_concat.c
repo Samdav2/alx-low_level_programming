@@ -7,27 +7,13 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
-	int j = 0;
 	int lenght;
+	char *pointer;
 
 	lenght = (strlen(s1) + strlen(s2));
 
-	s1 = malloc((lenght + 1) * sizeof(char));
+	pointer = malloc((lenght + 1) * sizeof(char));
 
-	while (*(s1 + i) != '\0')
-	{
-		i++;
-	}
-
-	while (j >= 0)
-	{
-		s1[i] = s2[j];
-	
-	if (*(s2 + j) == '\0')
-		break;
-	i++;
-	j++;
-	}
-	return (s1);
+	pointer = strcat(s1, s2);
+	return (pointer);
 }
