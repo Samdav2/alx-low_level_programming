@@ -9,11 +9,18 @@ char *str_concat(char *s1, char *s2)
 {
 	int lenght;
 	char *pointer;
+	int i;
+	int j;
 
 	lenght = (strlen(s1) + strlen(s2));
 
 	pointer = malloc((lenght + 1) * sizeof(char));
 
-	pointer = strcat(s1, s2);
+	for (i = 0; i < lenght; i++)
+		pointer[i] = s[i];
+
+	for (j = 0; j < lenght; i++; j++)
+		pointer = s2[j];
+
 	return (pointer);
 }
