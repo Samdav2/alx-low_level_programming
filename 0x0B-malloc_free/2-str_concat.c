@@ -25,13 +25,10 @@ char *str_concat(char *s1, char *s2)
 		*(s1 + i) = *(s2 + j);
 	
 	if (*(s2 + j) == '\0')
-	{
 		break;
-	}
 	i++;
 	j++;
 	}
-	s1[i + j] = '\0';
 	return (s1);
 	free (s1);
 }
