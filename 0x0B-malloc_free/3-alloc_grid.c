@@ -11,14 +11,14 @@ int **alloc_grid(int width, int height)
 	int *pointer;
 	int multi;
 
-	if (widht == 0)
+	if (width == 0)
 		return (NULL);
 	if (height == 0)
 		return (NULL);
 
 	multi = height * width;
 
-	pointer = malloc(multi + 1) * sizeof(int);
+	pointer = malloc((multi + 1) * sizeof(int));
 
 	if (pointer == NULL)
 		return(NULL);
