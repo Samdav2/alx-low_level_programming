@@ -8,7 +8,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i;
-	char **pointer;
+	char *pointer;
 
 
 	if (ac == 0 || av == NULL)
@@ -25,5 +25,5 @@ char *argstostr(int ac, char **av)
 	}
 	pointer[i] = '\0';
 
-	return (pointer[i]);
+	return (pointer);
 }
