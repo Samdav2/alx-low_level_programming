@@ -8,7 +8,7 @@ char **strtow(char *str)
 {
 	int i;
 	int j = 0;
-	char *word;
+	char **word;
 
 	int lenght;
 
@@ -21,7 +21,7 @@ char **strtow(char *str)
 
 	for (i = 0; i < lenght;)
 	{
-		if( s[i] != ' ' && s[i] '\0')
+		if( s[i] != ' ' && s[i] != '\0')
 		{
 			word[j] = s[i];
 			j++;
