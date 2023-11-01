@@ -13,7 +13,7 @@ char **strtow(char *str)
 
 	int lenght;
 
-	if (str == NULL || str == " ")
+	if (str == NULL)
 	{
 		return(NULL);
 	}
@@ -31,7 +31,7 @@ char **strtow(char *str)
 		else if (j > 0)
 		{
 			word[j] = '\0';
-			pointer = word;
+			*pointer = word;
 		}
 		i++;
 	}
