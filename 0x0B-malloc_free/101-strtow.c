@@ -9,11 +9,11 @@ char **strtow(char *str)
 	int i;
 	int j = 0;
 	char *word;
-	char *pointer;
+	char **pointer;
 
 	int lenght;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str == " ")
 	{
 		return(NULL);
 	}
