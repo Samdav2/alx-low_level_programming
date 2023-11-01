@@ -23,11 +23,11 @@ char **strtow(char *str)
 	{
 		if( str[i] != ' ' && str[i] != '\0')
 		{
-			word[j] = s[i];
+			word[j] = str[i];
 			j++;
 		}
 
-		else if(j > 0)
+		else if (j > 0)
 		{
 			word[j] = '\0';
 		}
