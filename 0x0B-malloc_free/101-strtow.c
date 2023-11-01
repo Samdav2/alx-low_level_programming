@@ -19,6 +19,7 @@ char **strtow(char *str)
 	}
 
 	word = malloc((lenght = strlen(str) + 1) * sizeof(char));
+	word = (char **)malloc((lenght + 1) * sizeof(char));
 
 	for (i = 0; i < lenght;)
 	{
@@ -31,7 +32,7 @@ char **strtow(char *str)
 		else if (j > 0)
 		{
 			word[j] = '\0';
-			strcpy(pointer, word);
+			strcpy(pointer[0], word);
 		}
 		i++;
 	}
