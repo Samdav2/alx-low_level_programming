@@ -21,7 +21,7 @@ char **strtow(char *str)
 
 	for (i = 0; i < lenght;)
 	{
-		if( s[i] != ' ' && s[i] != '\0')
+		if( str[i] != ' ' && str[i] != '\0')
 		{
 			word[j] = s[i];
 			j++;
