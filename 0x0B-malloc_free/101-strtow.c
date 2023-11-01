@@ -31,11 +31,10 @@ char **strtow(char *str)
 		else if (j > 0)
 		{
 			word[j] = '\0';
-			*pointer = word;
+			pointer[i] = word[j];
 		}
 		i++;
 	}
-
 
 	return (pointer);
 }
