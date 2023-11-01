@@ -18,6 +18,8 @@ char *argstostr(int ac, char **av)
 	pointer = malloc((ac) * sizeof(char));
 
 	for (i = 0; i <= ac; i++)
+	{
 		pointer[i] = av[i];
-		return (pointer[i]);
+	}
+	return (pointer[i]);
 }
