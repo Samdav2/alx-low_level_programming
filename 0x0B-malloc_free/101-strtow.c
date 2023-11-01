@@ -12,7 +12,7 @@ char **strtow(char *str)
 
 	int lenght;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str[i] == "")
 	{
 		return(NULL);
 	}
@@ -34,5 +34,5 @@ char **strtow(char *str)
 		i++;
 	}
 
-	return (word);
+	return (word[i]);
 }
