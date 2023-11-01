@@ -25,5 +25,5 @@ char *argstostr(int ac, char **av)
 	}
 	pointer[i] = '\0';
 
-	return (pointer);
+	return (pointer[i]);
 }
