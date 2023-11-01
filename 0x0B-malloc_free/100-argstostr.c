@@ -21,7 +21,9 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i <= ac; i++)
 	{
 		pointer[i] = av[i];
-		printf("%s\n", pointer);
+		return (pointer[i]);
 	}
-	return (pointer[i]);
+	pointer[i] = '\0';
+
+	return (pointer);
 }
