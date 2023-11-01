@@ -8,7 +8,8 @@ char **strtow(char *str)
 {
 	int i;
 	int j = 0;
-	char **word;
+	char *word;
+	char *pointer;
 
 	int lenght;
 
@@ -30,9 +31,11 @@ char **strtow(char *str)
 		else if (j > 0)
 		{
 			word[j] = '\0';
+			pointer = word[1];
 		}
 		i++;
 	}
 
-	return (word[i]);
+
+	return (pointer);
 }
