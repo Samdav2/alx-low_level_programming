@@ -17,7 +17,7 @@ char **strtow(char *str)
 		return(NULL);
 	}
 
-	word = malloc((lenght = strlen(s) + 1) * sizeof(char));
+	word = malloc((lenght = strlen(str) + 1) * sizeof(char));
 
 	for (i = 0; i < lenght;)
 	{
