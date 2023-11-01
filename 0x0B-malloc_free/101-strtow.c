@@ -33,6 +33,7 @@ char **strtow(char *str)
 		{
 			word[j] = '\0';
 			strcpy(pointer[0], word);
+			return (pointer[i]);
 		}
 		i++;
 	}
