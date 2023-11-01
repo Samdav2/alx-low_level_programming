@@ -15,15 +15,13 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	pointer = (char *)malloc((i + 1) * sizeof(char));
+	pointer = malloc((i + 1) * sizeof(char));
 
 	for (i = 0; i <= ac; i++)
 	{
-		if (!pointer[i] = av[i])
-		{
-			return (NULL);
-		}
 		pointer[i] = av[i];
 		return (pointer[i]);
 	}
+
+	return (pointer);
 }
