@@ -31,7 +31,7 @@ char **strtow(char *str)
 		else if (j > 0)
 		{
 			word[j] = '\0';
-			strcpy(pointer[0], word);
+			strcpy(pointer, word);
 		}
 		i++;
 	}
