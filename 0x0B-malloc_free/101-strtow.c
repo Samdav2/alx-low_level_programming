@@ -14,8 +14,6 @@ char **strtow(char *str)
 	int wordlenght;
 	int j;
 
-
-
 	if (str == NULL || str[0] == '\0')
 	{
 		return (NULL);
@@ -32,7 +30,6 @@ char **strtow(char *str)
 			}
 		}
 	}
-
 	words = (char **)malloc((numword + 1) * sizeof(char));
 	if (words == NULL)
 	{
@@ -67,5 +64,4 @@ char **strtow(char *str)
 	words[numword] = NULL;
 
 	return (words);
-
 }
