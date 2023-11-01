@@ -21,7 +21,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if(str[i] != ' ')
+		if (str[i] != ' ')
 		{
 			numword++;
 			while (str[i] != ' ' && str[i] != '\0')
