@@ -32,6 +32,7 @@ char **strtow(char *str)
 		else if (j > 0)
 		{
 			word[j] = '\0';
+			printf("%s/n", word);
 			strcpy(pointer[0], word);
 			return (pointer);
 		}
