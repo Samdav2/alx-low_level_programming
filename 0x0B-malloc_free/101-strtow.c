@@ -6,38 +6,66 @@
  */
 char **strtow(char *str)
 {
+	int numword = 0;
 	int i;
-	int j = 0;
-	char *word;
-	char **pointer;
+	char **words;
+	int wordindex = 0;
+	int wordstart = 0;
+	int wordlenght;
+	int j;
 
-	int lenght;
 
-	if (str == NULL)
+
+	if (str == NULL || str[0] == '\0')
 	{
-		return(NULL);
+		return (NULL);
 	}
 
-	word = malloc((lenght = strlen(str) + 1) * sizeof(char));
-	pointer = (char **)malloc((lenght + 1) * sizeof(char));
-
-	for (i = 0; i < lenght;)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if( str[i] != ' ' && str[i] != '\0')
+		if(str[i] != ' ')
 		{
-			word[j] = str[i];
-			j++;
+			numword++;
+			while (str[i] != ' ' && str[i] != '\0')
+			{
+				i++;
+			}
 		}
-
-		else if (j > 0)
-		{
-			word[j] = '\0';
-			printf("%s/n", word);
-			strcpy(pointer[0], word);
-			return (pointer);
-		}
-		i++;
 	}
 
-	return (pointer);
+	words = (char **)malloc((numword + 1) * sizeof(char));
+	if (words == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ')
+		{
+			wordstart = i;
+			while (str[i] != ' ' && str[i] != '\0')
+				{
+					i++
+				}
+			wordlenght = i - wordstart;
+			word[wordindex] = (char *)malloc((wordlenght + 1) * sizeof(char));
+			if (words[wordindex] == NULL)
+			{
+				for (int j = 0; j < wordindex; j++)
+				{
+					free(words[j]);
+				}
+			free(words);
+			return (NULL);
+			}
+			strncpy(words[wordindex], str + wordstart, wordlenght);
+			words[wordsindex][wordlenght] = '\0';
+			wordindex++;
+		}
+	}
+	words[numwords] = NULL;
+
+	return (words);
+
 }
