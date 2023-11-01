@@ -19,7 +19,7 @@ char **strtow(char *str)
 	}
 
 	word = malloc((lenght = strlen(str) + 1) * sizeof(char));
-	word = (char **)malloc((lenght + 1) * sizeof(char));
+	pointer = (char **)malloc((lenght + 1) * sizeof(char));
 
 	for (i = 0; i < lenght;)
 	{
