@@ -4,6 +4,7 @@
  * @s1: The first string
  * @s2: The second string
  * @n: The number of words in the string to be copied
+ * Return: A pointer to the concatenate string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
