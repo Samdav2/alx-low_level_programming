@@ -8,42 +8,41 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pointer;
-	unsigned int lenght1;
-	unsigned int lenght2;
+	unsigned int lenght1, lenght2;
 	unsigned int total = 0;
 	unsigned int i;
 	unsigned int j;
 
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
 	lenght1 = strlen(s1);
 	lenght2 = strlen(s2);
-	total = lenght1 + lenght2;
-	pointer = (char *)malloc((total) * sizeof(char));
+	total = lenght1 + n;
+	pointer = (char *)malloc((total + 1) * sizeof(char));
 
 	if (pointer == NULL)
 	{
 		return (NULL);
 	}
 
+	if (n >= lenght2)
+		n = lenght2;
+
 	for (i = 0; i < lenght1; i++)
 	{
 		pointer[i] = s1[i];
-
-		if (pointer[i] == '\0')
-		{
-			for (j = 0; j < n; j++)
-			{
-				pointer[i] = s2[j];
-
-				if (j == n || lenght2 == 0)
-				{
-					pointer[i] = '\0';
-					break;
-				}
-
-			}
-		}
-	
 	}
+	for (j = 0; j < n; j++)
+	{
+		pointer[i] = s2[j];
+		i++;
+	}
+
+	pointer[i] = '\0';
 
 	return (pointer);
 }
