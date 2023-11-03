@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	pointer = malloc((nmemb * size) * sizeof(int));
 
-	memset(pointer, 0, nmemb * size);
+	memset (pointer, 0, nmemb * size);
 
 	return (pointer);
 }
