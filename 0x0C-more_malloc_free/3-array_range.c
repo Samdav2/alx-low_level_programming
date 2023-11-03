@@ -9,13 +9,16 @@ int *array_range(int min, int max)
 {
 	int i;
 	int *pointer;
+	int size;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
 
-	pointer = malloc((max + 1) * sizeof(int));
+	size = (max - min) + 1;
+
+	pointer = malloc((size) * sizeof(int));
 
 	if (pointer == NULL)
 	{
