@@ -20,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		}
 		i++;
 	}
-	pointer = malloc((n * i) * sizeof(int));
+	pointer = malloc((n + i) * sizeof(int));
 
 	 return (pointer);
 }
