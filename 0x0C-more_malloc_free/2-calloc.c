@@ -12,9 +12,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	int *pointer;
 
-	for(i = 0; i <= nmemb)
+	for(i = 0; i <= nmemb;)
 	{
-		for(n = 0; n <= size)
+		for(n = 0; n <= size;)
 		{
 			n++;
 		}
