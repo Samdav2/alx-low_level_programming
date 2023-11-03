@@ -7,20 +7,14 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	unsigned int n;
-
 	int *pointer;
 
-	for(i = 0; i <= nmemb;)
+	if (nmemb == 0 || size == 0)
 	{
-		for(n = 0; n <= size;)
-		{
-			n++;
-		}
-		i++;
+		return (NULL);
 	}
-	pointer = malloc((n + i) * sizeof(int));
+
+	pointer = malloc((nmemb * size) * sizeof(int));
 
 	 return (pointer);
 }
