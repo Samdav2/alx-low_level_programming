@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < argc; i++)
 	{
-		if (atoi(argv[i]) < 0 && atoi(argv[i]) > 9)
+		if (atoi(argv[1]) < 0 || atoi(argv[1]) > 9)
 		{
 			printf("Error\n");
 			exit(98);
@@ -31,5 +31,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[2]);
 	mul =  num1 * num2;
 
-	return (mul);
+	printf("%d\n", mul);
+
+	return (0);
 }
