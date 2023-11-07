@@ -1,16 +1,15 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _DOG_H_
+#define _DOG_H_
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 /**
- * dog - C program that  create structure for a c program
+ * struct dog - C program that  create structure for a c program
  * @name: The name of the user
  * @age: The age of the user
  * @owner: The owner of the dog
- * Return: Nothing
  */
 
 struct dog
