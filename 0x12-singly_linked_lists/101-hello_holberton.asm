@@ -1,16 +1,16 @@
-section .data
-    hello db 'Hello, Holberton', 0
+	section .data
+    			hello db 'Hello, Holberton', 0
 
-section .text
-    global main
+	section .text
+    			global main
 
-extern printf
+			extern printf
 
-main:
-    push hello
-    call printf
-    add rsp, 8  ; Adjust the stack pointer
+	main:
+    		push hello
+    		call printf
+    		add rsp, 8  ; Adjust the stack pointer
 
-    ; Exit the program
-    mov rdi, 0  ; Return 0 from main
-    call exit
+    		; Exit the program
+    		mov rdi, 0  ; Return 0 from main
+    		call exit
