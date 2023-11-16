@@ -1,4 +1,4 @@
-#inclue "lists.h"
+#include "lists.h"
 /**
  * add_node_end - A function that add node to the end
  * @head: the head of the node
@@ -21,7 +21,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	n_node->str = strdup(str);
-	if (n_node-> == NULL)
+	if (n_node->str== NULL)
 	{
 		free(n_node);
 		return (NULL);
