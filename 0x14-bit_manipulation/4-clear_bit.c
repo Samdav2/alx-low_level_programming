@@ -5,7 +5,7 @@
  * @index: The index of the given number
  * Return: 1 if worked  or -1 if an error occured
  */
-int claer_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int m;
 
