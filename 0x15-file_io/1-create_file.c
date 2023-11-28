@@ -9,29 +9,33 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd;
 	ssize_t written;
+	size_t lenght;
 
 	if (!filename)
 	{
 		return (-1);
 	}
 
-	fd = open(filename, O_RDWR | O_TRUNC, 0);
-	if (fd < 0)
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (fd == -1)
 	{
 		return (-1);
 	}
 
-	if (text_content)
+	if (text_content != NULL)
 	{
-		written = write(fd, text_content, strlen(text_content));
-		if (written < 0)
+		lenght = 0;
+		while (text_content[lenght] != '\0')
+			lenght++;
+
+		written = write(fd, text_content, lenght);
+
+		if (written == -1)
 		{
 			close(fd);
 			return (-1);
 		}
 	}
-
-	chmod(filename, S_IRUSR | S_IWUSR);
 
 	close(fd);
 
