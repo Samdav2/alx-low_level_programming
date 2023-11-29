@@ -17,15 +17,15 @@ int main(int argc, char *argv[])
 	int fd_from;
 	int fd_to;
 	char buffer[BUF_SIZE];
-	ssize_t byte_read;
+	ssize_t bytes_read;
+	ssize_t bytes_written;
+	const char *file_from = argv[1];
+	const char *file_to = argv[2];
 
     if (argc != 3)
     {
 	error_exit(97, "Usage: cp file_from file_to");
     }
-
-	const char *file_from = argv[1];
-	const char *file_to = argv[2];
 
  	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
